@@ -1,4 +1,5 @@
 $(function() {
+    "use strict"
     var vacantX = 300;
     var vacantY = 300;
     $("#puzzlearea").children().each(function(i) {
@@ -65,6 +66,7 @@ $(function() {
 });
 
 function canMove(tempX, vacantX, tempY, vacantY) {
+    "use strict"
     return (tempX + 100 == vacantX && tempY == vacantY) ||
         (tempX - 100 == vacantX && tempY == vacantY) ||
         (tempY + 100 == vacantY && tempX == vacantX) ||
@@ -72,6 +74,7 @@ function canMove(tempX, vacantX, tempY, vacantY) {
 }
 
 function TileMoveFunc(tile, vacantX, vacantY, tempX, tempY) {
+    "use strict"
     $(tile).attr("x", vacantX);
     $(tile).attr("y", vacantY);
     let x = vacantX;
